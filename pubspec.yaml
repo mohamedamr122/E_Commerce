@@ -63,18 +63,7 @@ flutter:
   assets:
     - assets/splash_screen_assets/
     - assets/get_started_screen/
-    - assets/main_screen/men.jpg
-    - assets/main_screen/woman.jpg
-    - assets/main_screen/children.jpg
-    - assets/main_screen/fashion_men.jpg
-    - assets/main_screen/New _Collection.jpg
-    - assets/main_screen/Woman_New_Collection.jpg
-    - assets/main_screen/blouse.jpg
-    - assets/main_screen/Dress.jpg
-    - assets/main_screen/Kraft.jpg
-    - assets/main_screen/Shemiz.jpg
-    - assets/main_screen/Sells.jpg
-    - assets/main_screen/T-Shirt.jpg
+    - assets/main_screen/
     - assets/Google.png
     - assets/Facebook.png
     - assets/X.png

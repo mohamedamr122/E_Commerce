@@ -25,6 +25,8 @@ class _SignUpPageState extends State<SignUpPage> {
   final _formKey = GlobalKey<FormState>();
 
   bool secureText = true;
+  RegExp regex =
+      RegExp(r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#\$&*~]).{8,}$');
 
   @override
   Widget build(BuildContext context) {
@@ -124,8 +126,6 @@ class _SignUpPageState extends State<SignUpPage> {
                           ? Icons.visibility_off
                           : Icons.visibility)),
                   validator: (password) {
-                    RegExp regex = RegExp(
-                        r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#\$&*~]).{8,}$');
                     var passNonNullValue = password ?? "";
                     if (passNonNullValue.isEmpty) {
                       return ("Password is required");
@@ -155,8 +155,6 @@ class _SignUpPageState extends State<SignUpPage> {
                           ? Icons.visibility_off
                           : Icons.visibility)),
                   validator: (confirmPassword) {
-                    RegExp regex = RegExp(
-                        r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#\$&*~]).{8,}$');
                     var passNonNullValue = confirmPassword ?? "";
                     if (passNonNullValue.isEmpty) {
                       return ("Password not match");

@@ -3,12 +3,7 @@ import 'package:e_commerce/Components/card_view.dart';
 import 'package:e_commerce/Components/feature_products.dart';
 import 'package:e_commerce/Components/home_screen_category_top.dart';
 import 'package:e_commerce/Home_Screen/men_category.dart';
-// import 'package:e_commerce/Home_Screen/account.dart';
-// import 'package:e_commerce/Home_Screen/cart.dart';
-// import 'package:e_commerce/Home_Screen/sells.dart';
-// import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-// import 'package:flutter/widgets.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 
 class HomeScreen extends StatefulWidget {

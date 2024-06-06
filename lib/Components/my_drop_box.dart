@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class MyDropBox extends StatefulWidget {
-  MyDropBox({super.key, required this.items, required this.hintText});
+  const MyDropBox({super.key, required this.items, required this.hintText});
   final List<DropdownMenuItem<String>>? items;
-  String hintText;
+  final String hintText;
 
   @override
   State<MyDropBox> createState() => _MyDropBoxState();

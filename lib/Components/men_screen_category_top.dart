@@ -13,8 +13,8 @@ class MenCategoryImage extends StatelessWidget {
         ClipOval(
           child: Image.asset(
             imagePass,
-            width: 64,
-            height: 64,
+            width: 97,
+            height: 97,
             fit: BoxFit.cover,
           ),
         ),

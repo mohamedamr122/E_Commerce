@@ -21,13 +21,12 @@ class MyNavigatorButton extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        margin: const EdgeInsets.only(top: 30, left: 50, right: 50),
         height: height,
         width: width,
         decoration: BoxDecoration(
           color: color,
           shape: BoxShape.rectangle,
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(10),
         ),
         child: Center(
           child: Text(
