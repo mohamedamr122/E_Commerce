@@ -1,6 +1,6 @@
+import 'package:e_commerce/Components/app_bar_text.dart';
 import 'package:e_commerce/Components/my_text_Field.dart';
 import 'package:flutter/material.dart';
-import 'package:simple_gradient_text/simple_gradient_text.dart';
 
 class ChangepasswordPage extends StatefulWidget {
   const ChangepasswordPage({super.key});
@@ -29,18 +29,7 @@ class _ChangepasswordPageState extends State<ChangepasswordPage> {
           backgroundColor: Colors.white,
           elevation: 0,
           centerTitle: true,
-          title: GradientText(
-            'B S B',
-            colors: const [
-              Color.fromRGBO(23, 78, 73, 1),
-              Color.fromRGBO(10, 85, 79, 0),
-            ],
-            style: const TextStyle(
-              fontSize: 31.3,
-              fontWeight: FontWeight.w900,
-              fontStyle: FontStyle.italic,
-            ),
-          ),
+          title: const AppBarText(text: 'B S B')
         ),
         body: ListView(
           padding: const EdgeInsets.all(16),

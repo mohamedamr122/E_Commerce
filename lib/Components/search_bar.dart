@@ -12,7 +12,7 @@ class MySearchBar extends StatelessWidget {
         color: const Color.fromARGB(72, 158, 158, 158),
         borderRadius: BorderRadius.circular(20),
       ),
-      child: TextField(
+      child: TextFormField(
         cursorColor: const Color.fromRGBO(23, 78, 73, 1),
         decoration: InputDecoration(
           prefixIcon: const Icon(

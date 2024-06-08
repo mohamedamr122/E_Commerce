@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 class SmallTextField extends StatelessWidget {
   const SmallTextField({
     super.key,
+    required this.lablelText,
   });
+  final String lablelText;
 
   @override
   Widget build(BuildContext context) {
@@ -13,6 +15,10 @@ class SmallTextField extends StatelessWidget {
       child: TextFormField(
         textAlign: TextAlign.start,
         decoration: InputDecoration(
+          label: Text(
+            lablelText,
+            style: const TextStyle(color: Colors.grey),
+          ),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(15),
           ),

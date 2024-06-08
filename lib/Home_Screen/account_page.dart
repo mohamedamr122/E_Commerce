@@ -1,10 +1,10 @@
+import 'package:e_commerce/Components/app_bar_text.dart';
 import 'package:e_commerce/Components/item_button.dart';
 import 'package:e_commerce/Orders_Pages/orders_page.dart';
 import 'package:e_commerce/Payment_Pages/payment_page.dart';
 import 'package:e_commerce/Edit_page/edit_profile_page.dart';
 import 'package:e_commerce/Setting_Pages/setting_page.dart';
 import 'package:flutter/material.dart';
-import 'package:simple_gradient_text/simple_gradient_text.dart';
 
 class AccountPage extends StatelessWidget {
   const AccountPage({super.key});
@@ -17,18 +17,7 @@ class AccountPage extends StatelessWidget {
         backgroundColor: Colors.white,
         centerTitle: true,
         elevation: 0,
-        title: GradientText(
-          'B S B',
-          colors: const [
-            Color.fromRGBO(23, 78, 73, 1),
-            Color.fromRGBO(10, 85, 79, 0),
-          ],
-          style: const TextStyle(
-            fontSize: 31.3,
-            fontWeight: FontWeight.w900,
-            fontStyle: FontStyle.italic,
-          ),
-        ),
+        title: const AppBarText(text: 'B S B'),
       ),
       body: ListView(
         children: [

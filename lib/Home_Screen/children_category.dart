@@ -1,20 +1,19 @@
 import 'package:e_commerce/Components/app_bar_text.dart';
 import 'package:e_commerce/Components/categories_men_shop.dart';
-import 'package:e_commerce/Components/created_for_you_mens.dart';
 import 'package:e_commerce/Components/product_list_view.dart';
 import 'package:e_commerce/Components/search_bar.dart';
 import 'package:flutter/material.dart';
 
-class MenCategory extends StatelessWidget {
-  static const String routeName = 'MenCategory';
-  const MenCategory({super.key});
+class ChildrenCategory extends StatelessWidget {
+  static const String routeName = 'ChildrenCategory';
+  const ChildrenCategory({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         leadingWidth: 66,
-        title: const AppBarText(text: 'Men'),
+        title: const AppBarText(text: 'Childern'),
         centerTitle: true,
         actions: [
           Padding(
@@ -38,7 +37,7 @@ class MenCategory extends StatelessWidget {
             SliverList(
               delegate: SliverChildListDelegate(
                 [
-                  const MySearchBar(),
+                   const MySearchBar(),
                   const SizedBox(
                     height: 20,
                   ),
@@ -101,10 +100,6 @@ class MenCategory extends StatelessWidget {
                   ),
                   const SizedBox(
                     height: 20,
-                  ),
-                  const CreatedForYouMens(),
-                  const SizedBox(
-                    height: 15,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,

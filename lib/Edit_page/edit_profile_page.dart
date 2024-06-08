@@ -1,7 +1,7 @@
+import 'package:e_commerce/Components/app_bar_text.dart';
 import 'package:e_commerce/Components/my_text_Field.dart';
 import 'package:e_commerce/Edit_page/change_password_page.dart';
 import 'package:flutter/material.dart';
-import 'package:simple_gradient_text/simple_gradient_text.dart';
 
 class EditProfilePage extends StatelessWidget {
   EditProfilePage({super.key});
@@ -17,22 +17,10 @@ class EditProfilePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Colors.white,
-        centerTitle: true,
-        elevation: 0,
-        title: GradientText(
-          'B S B',
-          colors: const [
-            Color.fromRGBO(23, 78, 73, 1),
-            Color.fromRGBO(10, 85, 79, 0),
-          ],
-          style: const TextStyle(
-            fontSize: 31.3,
-            fontWeight: FontWeight.w900,
-            fontStyle: FontStyle.italic,
-          ),
-        ),
-      ),
+          backgroundColor: Colors.white,
+          centerTitle: true,
+          elevation: 0,
+          title: const AppBarText(text: 'B S B')),
       body: ListView(
         padding: const EdgeInsets.all(16),
         children: [

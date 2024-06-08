@@ -8,13 +8,9 @@ class ProductListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: ListView.builder(
-        physics: const NeverScrollableScrollPhysics(),
-        shrinkWrap: true,
-        itemCount: 10,
-        itemBuilder: (context, index) => const ProductBox(),
-      ),
+    return SliverList.builder(
+      itemCount: 10,
+      itemBuilder: (context, index) => const ProductBox(),
     );
   }
 }

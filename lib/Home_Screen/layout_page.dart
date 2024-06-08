@@ -1,6 +1,6 @@
-import 'package:e_commerce/Home_Screen/category_page.dart';
+import 'package:e_commerce/Category_Screen/category_page.dart';
 import 'package:e_commerce/Home_Screen/account_page.dart';
-import 'package:e_commerce/Home_Screen/cart_page.dart';
+import 'package:e_commerce/Cart_Screen/cart_page.dart';
 import 'package:e_commerce/Home_Screen/home_page.dart';
 import 'package:e_commerce/Home_Screen/sells_page.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +20,7 @@ class _LayoutPageState extends State<LayoutPage> {
     const SellsPage(),
     const CategoryScreen(),
     const AccountPage(),
-    const CartScreen()
+    const CartPage()
   ];
   int _selectedIndex = 0;
   @override

@@ -29,7 +29,10 @@ class MyTextField extends StatelessWidget {
       obscureText: obscureText,
       decoration: InputDecoration(
         suffixIcon: suffixIcon,
-        label: Text(lablelText),
+        label: Text(
+          lablelText,
+          style: const TextStyle(color: Colors.grey),
+        ),
         labelStyle: const TextStyle(
           color: Color.fromRGBO(80, 80, 80, 1),
         ),

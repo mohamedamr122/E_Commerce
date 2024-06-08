@@ -1,6 +1,8 @@
+import 'package:e_commerce/Components/app_bar_text.dart';
 import 'package:e_commerce/Components/my_text_Field.dart';
 import 'package:e_commerce/Components/navigator_button.dart';
 import 'package:e_commerce/Components/small_text_field.dart';
+import 'package:e_commerce/Orders_Pages/orders_page.dart';
 import 'package:flutter/material.dart';
 
 class NewCardPage extends StatelessWidget {
@@ -12,37 +14,48 @@ class NewCardPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text(
-          'Add new card',
-          style: TextStyle(
-              fontFamily: 'Roboto', fontSize: 25, fontWeight: FontWeight.w700),
+        title: const AppBarText(
+          text: 'BSB',
         ),
-      ),
-      body: ListView(
-        padding: const EdgeInsets.all(16),
-        children: [
-          const ClipRRect(
-            child: Image(image: AssetImage('assets/payment_screen/card.png')),
-          ),
-          const Padding(
-            padding: EdgeInsets.all(8.0),
-            child: Text(
-              'Cardholder Name',
-              style: TextStyle(
-                fontFamily: 'Roboto',
-                fontSize: 13,
-                fontWeight: FontWeight.w700,
-                color: Color(0xff4B4B4B),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.only(right: 8),
+            child: IconButton(
+              onPressed: () => {},
+              icon: const Icon(Icons.favorite_border),
+              style: const ButtonStyle(
+                iconColor: WidgetStatePropertyAll(Colors.grey),
+                iconSize: WidgetStatePropertyAll(30),
               ),
             ),
           ),
-          MyTextField(
-            lablelText: '',
-            obscureText: false,
-            suffixIcon: null,
-            fillColor: Colors.white,
-            validator: null,
-            controller: null,
+        ],
+      ),
+      body: ListView(
+        padding: const EdgeInsets.symmetric(horizontal: 16),
+        children: [
+          const Text(
+            'Add a new card',
+            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          const Text(
+            'We Accept',
+            style: TextStyle(
+                fontSize: 11, fontWeight: FontWeight.w300, color: Colors.black),
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Image.asset('assets/checkout_screen/visa.png'),
+              Image.asset('assets/checkout_screen/mastercard.png'),
+              Image.asset('assets/checkout_screen/telda.png')
+            ],
           ),
           const Padding(
             padding: EdgeInsets.all(8.0),
@@ -57,7 +70,7 @@ class NewCardPage extends StatelessWidget {
             ),
           ),
           MyTextField(
-            lablelText: '',
+            lablelText: 'Enter your card number',
             obscureText: false,
             suffixIcon: null,
             fillColor: Colors.white,
@@ -73,7 +86,7 @@ class NewCardPage extends StatelessWidget {
                   Padding(
                     padding: EdgeInsets.all(8.0),
                     child: Text(
-                      'Card Number',
+                      'Expiry',
                       style: TextStyle(
                         fontFamily: 'Roboto',
                         fontSize: 13,
@@ -82,7 +95,9 @@ class NewCardPage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SmallTextField()
+                  SmallTextField(
+                    lablelText: 'MM/YY',
+                  )
                 ],
               ),
               Column(
@@ -100,20 +115,40 @@ class NewCardPage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SmallTextField()
+                  SmallTextField(
+                    lablelText: 'Secure Code',
+                  )
                 ],
               ),
             ],
           ),
+          const SizedBox(
+            height: 10,
+          ),
+          const Text(
+            'Remember this card',
+            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+          ),
+          const SizedBox(
+            height: 5,
+          ),
+          const Text(
+            'BSB STORE will securely store this card for a faster payment experience. Your CV number will not be stored.',
+            style: TextStyle(
+                fontSize: 12, fontWeight: FontWeight.w400, color: Colors.grey),
+          ),
+          const SizedBox(
+            height: 20,
+          ),
           MyNavigatorButton(
               textColor: Colors.white,
               onTap: () {
-                Navigator.pop(context);
+                Navigator.pushNamed(context, OrdersPage.routeName);
               },
-              height: 41,
-              width: 345,
+              height: 57,
+              width: 333,
               color: const Color(0xff0D4641),
-              text: 'Add card')
+              text: 'ADD MY CARD')
         ],
       ),
     );

@@ -1,4 +1,4 @@
-import 'package:e_commerce/Payment_Pages/new_card_page.dart';
+import 'package:e_commerce/Payment_Pages/new_card_edit_page.dart';
 import 'package:flutter/material.dart';
 
 class PaymentPage extends StatelessWidget {
@@ -34,7 +34,7 @@ class PaymentPage extends StatelessWidget {
                     elevation: WidgetStatePropertyAll(0),
                     overlayColor: WidgetStatePropertyAll(Colors.white)),
                 onPressed: () {
-                  Navigator.pushNamed(context, NewCardPage.routeName);
+                  Navigator.pushNamed(context, NewCardEditPage.routeName);
                 },
                 child: const Text(
                   'Add new+',

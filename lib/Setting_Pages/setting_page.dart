@@ -25,7 +25,7 @@ class _SettingPageState extends State<SettingPage> {
       body: ListView(
         padding: const EdgeInsets.all(16),
         children: [
-          MyDropBox(items: const [
+          const MyDropBox(items: [
             DropdownMenuItem(
               value: 'Egypt',
               child: Text('Egypt'),
@@ -39,7 +39,7 @@ class _SettingPageState extends State<SettingPage> {
               child: Text('Sudan'),
             )
           ], hintText: 'Country'),
-          MyDropBox(items: const [
+          const MyDropBox(items: [
             DropdownMenuItem(
               value: 'AR',
               child: Text('AR'),

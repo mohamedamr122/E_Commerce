@@ -1,6 +1,9 @@
+import 'package:e_commerce/Cart_Screen/cart_page.dart';
+import 'package:e_commerce/Home_Screen/children_category.dart';
 import 'package:e_commerce/Home_Screen/home_page.dart';
+import 'package:e_commerce/Home_Screen/layout_page.dart';
 import 'package:e_commerce/Home_Screen/men_category.dart';
-import 'package:e_commerce/LogIn_SignUp_Pages/signup_page.dart';
+import 'package:e_commerce/Home_Screen/overview_page.dart';
 import 'package:e_commerce/routes.dart';
 import 'package:flutter/material.dart';
 
@@ -16,7 +19,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'B&SStore',
       debugShowCheckedModeBanner: false,
-      initialRoute: MenCategory.routeName,
+      initialRoute: CartPage.routeName,
       routes: routes,
     );
   }

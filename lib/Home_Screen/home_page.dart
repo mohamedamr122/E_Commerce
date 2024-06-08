@@ -1,10 +1,11 @@
+import 'package:e_commerce/Components/app_bar_text.dart';
 import 'package:e_commerce/Components/brands_grid.dart';
 import 'package:e_commerce/Components/card_view.dart';
 import 'package:e_commerce/Components/feature_products.dart';
 import 'package:e_commerce/Components/home_screen_category_top.dart';
+import 'package:e_commerce/Components/search_bar.dart';
 import 'package:e_commerce/Home_Screen/men_category.dart';
 import 'package:flutter/material.dart';
-import 'package:simple_gradient_text/simple_gradient_text.dart';
 
 class HomeScreen extends StatefulWidget {
   static const String routeName = 'Home Screen';
@@ -16,25 +17,12 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  // int _currentIndex = 0;
-  // final taps = [HomeScreen(), Sells(), Cart(), Account()];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         leadingWidth: 66,
-        title: GradientText(
-          'B & S',
-          colors: const [
-            Color.fromRGBO(23, 78, 73, 1),
-            Color.fromRGBO(10, 85, 79, 0),
-          ],
-          style: const TextStyle(
-            fontSize: 31.3,
-            fontWeight: FontWeight.w900,
-            fontStyle: FontStyle.italic,
-          ),
-        ),
+        title: const AppBarText(text: 'B & S'),
         centerTitle: true,
         leading: IconButton(
           onPressed: () => {},
@@ -63,32 +51,7 @@ class _HomeScreenState extends State<HomeScreen> {
             const SizedBox(
               height: 10,
             ),
-            Container(
-              decoration: BoxDecoration(
-                color: const Color.fromARGB(72, 158, 158, 158),
-                borderRadius: BorderRadius.circular(20),
-              ),
-              child: TextField(
-                cursorColor: const Color.fromRGBO(23, 78, 73, 1),
-                decoration: InputDecoration(
-                  prefixIcon: const Icon(
-                    Icons.search,
-                    color: Color.fromRGBO(106, 106, 106, 1),
-                  ),
-                  hintStyle: const TextStyle(fontSize: 17),
-                  hintText: 'Search your trips',
-                  suffixIcon: IconButton(
-                    icon: const Icon(
-                      Icons.mic,
-                      color: Color.fromRGBO(106, 106, 106, 1),
-                    ),
-                    onPressed: () => {},
-                  ),
-                  border: InputBorder.none,
-                  contentPadding: const EdgeInsets.all(15),
-                ),
-              ),
-            ),
+            const MySearchBar(),
             const SizedBox(
               height: 25,
             ),
@@ -97,15 +60,10 @@ class _HomeScreenState extends State<HomeScreen> {
               children: [
                 GestureDetector(
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const MenCategory(),
-                      ),
-                    );
+                    Navigator.pushNamed(context, MenCategory.routeName);
                   },
                   child: const CategoryImage(
-                    imagePass: 'assets/main_screen/men.jpg',
+                    imagePass: 'assets/main_screen/men.png',
                     type: 'Men',
                   ),
                 ),
@@ -114,14 +72,14 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
                 const CategoryImage(
                   imagePass: 'assets/main_screen/woman.jpg',
-                  type: 'women',
+                  type: 'Women',
                 ),
                 const SizedBox(
                   width: 30,
                 ),
                 const CategoryImage(
                   imagePass: 'assets/main_screen/children.jpg',
-                  type: 'children',
+                  type: 'Children',
                 ),
               ],
             ),
