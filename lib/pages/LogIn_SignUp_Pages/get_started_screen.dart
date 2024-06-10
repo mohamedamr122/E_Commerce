@@ -1,4 +1,4 @@
-import 'package:e_commerce/LogIn_SignUp_Pages/signup_page.dart';
+import 'package:e_commerce/pages/LogIn_SignUp_Pages/signup_page.dart';
 import 'package:flutter/material.dart';
 
 class GetStartedScreen extends StatelessWidget {

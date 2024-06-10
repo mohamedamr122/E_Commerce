@@ -1,6 +1,6 @@
 import 'package:e_commerce/Components/my_drop_box.dart';
 import 'package:flutter/material.dart';
-import '../components/navigator_button.dart';
+import '../../components/navigator_button.dart';
 
 class SettingPage extends StatefulWidget {
   const SettingPage({super.key});

@@ -1,5 +1,5 @@
 import 'package:e_commerce/Components/my_text_Field.dart';
-import 'package:e_commerce/LogIn_SignUp_Pages/verification_code_forgot_password.dart';
+import 'package:e_commerce/pages/LogIn_SignUp_Pages/verification_code_forgot_password.dart';
 import 'package:flutter/material.dart';
 
 class ForgotPassword extends StatelessWidget {

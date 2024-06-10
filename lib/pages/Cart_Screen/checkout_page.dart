@@ -1,11 +1,11 @@
 import 'dart:ui';
-import 'package:e_commerce/Cart_Screen/add_address_page.dart';
-import 'package:e_commerce/Cart_Screen/new_card_page.dart';
+import 'package:e_commerce/pages/Cart_Screen/add_address_page.dart';
+import 'package:e_commerce/pages/Cart_Screen/new_card_page.dart';
 import 'package:e_commerce/Components/app_bar_text.dart';
 import 'package:e_commerce/Components/navigator_button.dart';
 import 'package:e_commerce/Components/product_box_cart.dart';
 import 'package:e_commerce/Components/total_price_container.dart';
-import 'package:e_commerce/Payment_Pages/payment_page.dart';
+import 'package:e_commerce/pages/Payment_Pages/payment_page.dart';
 import 'package:flutter/material.dart';
 
 class CheckoutPage extends StatelessWidget {

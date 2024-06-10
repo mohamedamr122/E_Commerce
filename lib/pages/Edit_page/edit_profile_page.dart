@@ -1,6 +1,6 @@
 import 'package:e_commerce/Components/app_bar_text.dart';
 import 'package:e_commerce/Components/my_text_Field.dart';
-import 'package:e_commerce/Edit_page/change_password_page.dart';
+import 'package:e_commerce/pages/Edit_page/change_password_page.dart';
 import 'package:flutter/material.dart';
 
 class EditProfilePage extends StatelessWidget {

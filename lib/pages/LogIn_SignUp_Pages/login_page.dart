@@ -1,7 +1,7 @@
 import 'package:e_commerce/Components/my_text_Field.dart';
-import 'package:e_commerce/Home_Screen/layout_page.dart';
-import 'package:e_commerce/LogIn_SignUp_Pages/forgot_password.dart';
-import 'package:e_commerce/LogIn_SignUp_Pages/signup_page.dart';
+import 'package:e_commerce/pages/Home_Screen/layout_page.dart';
+import 'package:e_commerce/pages/LogIn_SignUp_Pages/forgot_password.dart';
+import 'package:e_commerce/pages/LogIn_SignUp_Pages/signup_page.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {

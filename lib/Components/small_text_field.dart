@@ -19,7 +19,7 @@ class SmallTextField extends StatelessWidget {
             lablelText,
             style: const TextStyle(color: Colors.grey),
           ),
-          focusedBorder: OutlineInputBorder(
+          border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(15),
           ),
           enabledBorder: OutlineInputBorder(
@@ -29,9 +29,6 @@ class SmallTextField extends StatelessWidget {
           filled: true,
           suffixIcon: null,
           fillColor: Colors.white,
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(10),
-          ),
         ),
       ),
     );

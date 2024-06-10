@@ -36,7 +36,7 @@ class MyTextField extends StatelessWidget {
         labelStyle: const TextStyle(
           color: Color.fromRGBO(80, 80, 80, 1),
         ),
-        focusedBorder: const OutlineInputBorder(
+        border: const OutlineInputBorder(
           borderRadius: BorderRadius.all(
             Radius.circular(10),
           ),

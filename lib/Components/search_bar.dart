@@ -1,3 +1,4 @@
+import 'package:e_commerce/pages/Search_Sreen/search_page.dart';
 import 'package:flutter/material.dart';
 
 class MySearchBar extends StatelessWidget {
@@ -7,29 +8,34 @@ class MySearchBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: const Color.fromARGB(72, 158, 158, 158),
-        borderRadius: BorderRadius.circular(20),
-      ),
-      child: TextFormField(
-        cursorColor: const Color.fromRGBO(23, 78, 73, 1),
-        decoration: InputDecoration(
-          prefixIcon: const Icon(
-            Icons.search,
-            color: Color.fromRGBO(106, 106, 106, 1),
-          ),
-          hintStyle: const TextStyle(fontSize: 17),
-          hintText: 'Search your trips',
-          suffixIcon: IconButton(
-            icon: const Icon(
-              Icons.mic,
+    return GestureDetector(
+      onTap: () {
+        Navigator.pushNamed(context, SearchPage.routeName);
+      },
+      child: Container(
+        decoration: BoxDecoration(
+          color: const Color.fromARGB(72, 158, 158, 158),
+          borderRadius: BorderRadius.circular(20),
+        ),
+        child: TextFormField(
+          cursorColor: const Color.fromRGBO(23, 78, 73, 1),
+          decoration: InputDecoration(
+            prefixIcon: const Icon(
+              Icons.search,
               color: Color.fromRGBO(106, 106, 106, 1),
             ),
-            onPressed: () => {},
+            hintStyle: const TextStyle(fontSize: 17),
+            hintText: 'Search your trips',
+            suffixIcon: IconButton(
+              icon: const Icon(
+                Icons.mic,
+                color: Color.fromRGBO(106, 106, 106, 1),
+              ),
+              onPressed: () => {},
+            ),
+            border: InputBorder.none,
+            contentPadding: const EdgeInsets.all(15),
           ),
-          border: InputBorder.none,
-          contentPadding: const EdgeInsets.all(15),
         ),
       ),
     );

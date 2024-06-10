@@ -4,7 +4,7 @@ import 'package:e_commerce/Components/card_view.dart';
 import 'package:e_commerce/Components/feature_products.dart';
 import 'package:e_commerce/Components/home_screen_category_top.dart';
 import 'package:e_commerce/Components/search_bar.dart';
-import 'package:e_commerce/Home_Screen/men_category.dart';
+import 'package:e_commerce/pages/Home_Screen/men_category.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {

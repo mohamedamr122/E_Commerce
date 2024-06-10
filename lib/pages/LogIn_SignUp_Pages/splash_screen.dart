@@ -1,5 +1,5 @@
 // import 'package:e_commerce/get_started_screen.dart';
-import 'package:e_commerce/LogIn_SignUp_Pages/get_started_screen.dart';
+import 'package:e_commerce/pages/LogIn_SignUp_Pages/get_started_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 

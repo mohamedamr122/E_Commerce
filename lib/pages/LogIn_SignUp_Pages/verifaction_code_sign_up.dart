@@ -1,10 +1,11 @@
-import 'package:e_commerce/LogIn_SignUp_Pages/create_new_password.dart';
+import 'package:e_commerce/pages/Home_Screen/home_page.dart';
 import 'package:e_commerce/Components/verification_code_text_feild.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
-class VerificationCodeForgotPassword extends StatelessWidget {
-  static const String routeName = 'Verification Code Forgot Password';
-  const VerificationCodeForgotPassword({super.key});
+class VerificationCodeSignUp extends StatelessWidget {
+  static const String routeName = 'Verification Code Sign Up';
+  const VerificationCodeSignUp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -73,20 +74,21 @@ class VerificationCodeForgotPassword extends StatelessWidget {
             ),
             ElevatedButton(
               onPressed: () {
-                Navigator.of(context).pushNamed(CreateNewPassword.routeName);
+                Navigator.of(context).pushNamedAndRemoveUntil(
+                    HomeScreen.routeName, (route) => false);
               },
               style: const ButtonStyle(
-                backgroundColor: WidgetStatePropertyAll(
+                backgroundColor: MaterialStatePropertyAll(
                   Color.fromARGB(255, 16, 87, 43),
                 ),
-                shape: WidgetStatePropertyAll(
+                shape: MaterialStatePropertyAll(
                   RoundedRectangleBorder(
                     borderRadius: BorderRadius.all(
                       Radius.circular(10),
                     ),
                   ),
                 ),
-                fixedSize: WidgetStatePropertyAll(
+                fixedSize: MaterialStatePropertyAll(
                   Size(242, 52),
                 ),
               ),

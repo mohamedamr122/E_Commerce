@@ -1,5 +1,5 @@
 import 'package:e_commerce/Components/my_text_Field.dart';
-import 'package:e_commerce/Home_Screen/home_page.dart';
+import 'package:e_commerce/pages/Home_Screen/home_page.dart';
 import 'package:flutter/material.dart';
 
 class CreateNewPassword extends StatefulWidget {

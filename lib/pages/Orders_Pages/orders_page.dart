@@ -1,4 +1,4 @@
-import 'package:e_commerce/Orders_Pages/details_page.dart';
+import 'package:e_commerce/pages/Orders_Pages/details_page.dart';
 import 'package:flutter/material.dart';
 
 class OrdersPage extends StatelessWidget {

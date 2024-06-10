@@ -2,7 +2,7 @@ import 'package:e_commerce/Components/app_bar_text.dart';
 import 'package:e_commerce/Components/my_text_Field.dart';
 import 'package:e_commerce/Components/navigator_button.dart';
 import 'package:e_commerce/Components/small_text_field.dart';
-import 'package:e_commerce/Orders_Pages/orders_page.dart';
+import 'package:e_commerce/pages/Orders_Pages/orders_page.dart';
 import 'package:flutter/material.dart';
 
 class NewCardPage extends StatelessWidget {

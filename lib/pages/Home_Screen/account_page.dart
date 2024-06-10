@@ -1,9 +1,9 @@
 import 'package:e_commerce/Components/app_bar_text.dart';
 import 'package:e_commerce/Components/item_button.dart';
-import 'package:e_commerce/Orders_Pages/orders_page.dart';
-import 'package:e_commerce/Payment_Pages/payment_page.dart';
-import 'package:e_commerce/Edit_page/edit_profile_page.dart';
-import 'package:e_commerce/Setting_Pages/setting_page.dart';
+import 'package:e_commerce/pages/Orders_Pages/orders_page.dart';
+import 'package:e_commerce/pages/Payment_Pages/payment_page.dart';
+import 'package:e_commerce/pages/Edit_page/edit_profile_page.dart';
+import 'package:e_commerce/pages/Setting_Pages/setting_page.dart';
 import 'package:flutter/material.dart';
 
 class AccountPage extends StatelessWidget {

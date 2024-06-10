@@ -1,8 +1,8 @@
 import 'package:e_commerce/Components/app_bar_text.dart';
 import 'package:e_commerce/Components/search_bar.dart';
-import 'package:e_commerce/Home_Screen/children_category.dart';
-import 'package:e_commerce/Home_Screen/men_category.dart';
-import 'package:e_commerce/Home_Screen/women_category.dart';
+import 'package:e_commerce/pages/Home_Screen/children_category.dart';
+import 'package:e_commerce/pages/Home_Screen/men_category.dart';
+import 'package:e_commerce/pages/Home_Screen/women_category.dart';
 import 'package:flutter/material.dart';
 
 class CategoryScreen extends StatelessWidget {

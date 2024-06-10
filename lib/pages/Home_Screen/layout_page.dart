@@ -1,8 +1,8 @@
-import 'package:e_commerce/Category_Screen/category_page.dart';
-import 'package:e_commerce/Home_Screen/account_page.dart';
-import 'package:e_commerce/Cart_Screen/cart_page.dart';
-import 'package:e_commerce/Home_Screen/home_page.dart';
-import 'package:e_commerce/Home_Screen/sells_page.dart';
+import 'package:e_commerce/pages/Category_Screen/category_page.dart';
+import 'package:e_commerce/pages/Home_Screen/account_page.dart';
+import 'package:e_commerce/pages/Cart_Screen/cart_page.dart';
+import 'package:e_commerce/pages/Home_Screen/home_page.dart';
+import 'package:e_commerce/pages/Home_Screen/sells_page.dart';
 import 'package:flutter/material.dart';
 
 class LayoutPage extends StatefulWidget {

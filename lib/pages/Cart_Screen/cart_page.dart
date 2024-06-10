@@ -1,4 +1,4 @@
-import 'package:e_commerce/Cart_Screen/checkout_page.dart';
+import 'package:e_commerce/pages/Cart_Screen/checkout_page.dart';
 import 'package:e_commerce/Components/app_bar_text.dart';
 import 'package:e_commerce/Components/created_for_you_mens.dart';
 import 'package:e_commerce/Components/navigator_button.dart';

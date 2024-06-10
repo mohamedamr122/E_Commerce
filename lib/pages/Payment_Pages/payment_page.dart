@@ -1,4 +1,4 @@
-import 'package:e_commerce/Payment_Pages/new_card_edit_page.dart';
+import 'package:e_commerce/pages/Payment_Pages/new_card_edit_page.dart';
 import 'package:flutter/material.dart';
 
 class PaymentPage extends StatelessWidget {

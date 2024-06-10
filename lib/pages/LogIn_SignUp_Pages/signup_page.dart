@@ -1,6 +1,6 @@
 import 'package:e_commerce/Components/my_text_Field.dart';
-import 'package:e_commerce/LogIn_SignUp_Pages/login_page.dart';
-import 'package:e_commerce/LogIn_SignUp_Pages/verifaction_code_sign_up.dart';
+import 'package:e_commerce/pages/LogIn_SignUp_Pages/login_page.dart';
+import 'package:e_commerce/pages/LogIn_SignUp_Pages/verifaction_code_sign_up.dart';
 import 'package:flutter/material.dart';
 
 class SignUpPage extends StatefulWidget {
