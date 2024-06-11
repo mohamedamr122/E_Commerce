@@ -24,20 +24,28 @@ class _CartPageState extends State<CartPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        elevation: 0,
         leadingWidth: 150,
+        elevation: 0,
         centerTitle: true,
         title: const AppBarText(text: 'BSB'),
         leading: Row(
           children: [
+            IconButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              icon: const Icon(
+                Icons.arrow_back_ios_new_rounded,
+              ),
+            ),
             const Text(
-              '   Cart ',
+              'Cart ',
               style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
             ),
             Text(
               '($selectedValue Item)',
               style: const TextStyle(
-                  fontSize: 16,
+                  fontSize: 13,
                   fontWeight: FontWeight.w700,
                   color: Colors.grey),
             )
@@ -198,7 +206,7 @@ class _CartPageState extends State<CartPage> {
               height: 49,
               width: 345,
               color: const Color(0xff0D4641),
-              text: 'CHECKOUT')
+              text: 'CHECKOUT'),
         ],
       ),
     );
