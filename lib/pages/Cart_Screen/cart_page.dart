@@ -5,6 +5,7 @@ import 'package:e_commerce/Components/navigator_button.dart';
 import 'package:e_commerce/Components/product_box_cart.dart';
 import 'package:e_commerce/Components/search_bar.dart';
 import 'package:e_commerce/Components/total_price_container.dart';
+import 'package:e_commerce/pages/Search_Sreen/search_page.dart';
 import 'package:flutter/material.dart';
 
 class CartPage extends StatefulWidget {
@@ -17,13 +18,14 @@ class CartPage extends StatefulWidget {
 
 class _CartPageState extends State<CartPage> {
   String? selectedValue;
+  bool isFavorite = false;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        leadingWidth: double.minPositive,
+        leadingWidth: 150,
         centerTitle: true,
         title: const AppBarText(text: 'BSB'),
         leading: Row(
@@ -45,8 +47,19 @@ class _CartPageState extends State<CartPage> {
           Padding(
             padding: const EdgeInsets.only(right: 8),
             child: IconButton(
-              onPressed: () => {},
-              icon: const Icon(Icons.favorite_border),
+              onPressed: () => {
+                setState(
+                  () {
+                    isFavorite = !isFavorite;
+                  },
+                ),
+              },
+              icon: isFavorite
+                  ? const Icon(
+                      Icons.favorite_sharp,
+                      color: Colors.red,
+                    )
+                  : const Icon(Icons.favorite_border),
               style: const ButtonStyle(
                 iconColor: WidgetStatePropertyAll(Colors.grey),
                 iconSize: WidgetStatePropertyAll(30),
@@ -58,7 +71,11 @@ class _CartPageState extends State<CartPage> {
       body: ListView(
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
         children: [
-          const MySearchBar(),
+          GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(context, SearchPage.routeName);
+              },
+              child: const MySearchBar()),
           const SizedBox(
             height: 10,
           ),

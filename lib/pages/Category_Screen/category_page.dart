@@ -3,10 +3,18 @@ import 'package:e_commerce/Components/search_bar.dart';
 import 'package:e_commerce/pages/Home_Screen/children_category.dart';
 import 'package:e_commerce/pages/Home_Screen/men_category.dart';
 import 'package:e_commerce/pages/Home_Screen/women_category.dart';
+import 'package:e_commerce/pages/Search_Sreen/search_page.dart';
 import 'package:flutter/material.dart';
 
-class CategoryScreen extends StatelessWidget {
+class CategoryScreen extends StatefulWidget {
   const CategoryScreen({super.key});
+
+  @override
+  State<CategoryScreen> createState() => _CategoryScreenState();
+}
+
+class _CategoryScreenState extends State<CategoryScreen> {
+    bool isFavorite = false;
 
   @override
   Widget build(BuildContext context) {
@@ -20,8 +28,19 @@ class CategoryScreen extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(right: 8),
             child: IconButton(
-              onPressed: () => {},
-              icon: const Icon(Icons.favorite_border),
+              onPressed: () => {
+                setState(
+                  () {
+                    isFavorite = !isFavorite;
+                  },
+                ),
+              },
+              icon: isFavorite
+                  ? const Icon(
+                      Icons.favorite_sharp,
+                      color: Colors.red,
+                    )
+                  : const Icon(Icons.favorite_border),
               style: const ButtonStyle(
                 iconColor: WidgetStatePropertyAll(Colors.grey),
                 iconSize: WidgetStatePropertyAll(30),
@@ -33,7 +52,10 @@ class CategoryScreen extends StatelessWidget {
       body: ListView(
         padding: const EdgeInsets.symmetric(horizontal: 16),
         children: [
-          const MySearchBar(),
+          GestureDetector(onTap: () {
+                Navigator.pushNamed(context, SearchPage.routeName);
+              },
+            child: const MySearchBar()),
           const SizedBox(
             height: 20,
           ),

@@ -1,3 +1,4 @@
+import 'package:e_commerce/cubit/favorite_cubit.dart';
 import 'package:e_commerce/pages/Cart_Screen/add_address_page.dart';
 import 'package:e_commerce/pages/Cart_Screen/cart_page.dart';
 import 'package:e_commerce/pages/Cart_Screen/checkout_page.dart';
@@ -25,6 +26,7 @@ import 'package:e_commerce/pages/Payment_Pages/payment_page.dart';
 import 'package:e_commerce/pages/Search_Sreen/search_page.dart';
 import 'package:e_commerce/pages/Setting_Pages/setting_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 void main() {
   runApp(const MyApp());
@@ -35,40 +37,43 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'B&SStore',
-      debugShowCheckedModeBanner: false,
-      initialRoute: HomeScreen.routeName,
-      routes: {
-        SplashScreen.routeName: (context) => const SplashScreen(),
-        SettingPage.routeName: (context) => const SettingPage(),
-        GetStartedScreen.routeName: (context) => const GetStartedScreen(),
-        ForgotPassword.routeName: (context) => ForgotPassword(),
-        VerificationCodeSignUp.routeName: (context) =>
-            const VerificationCodeSignUp(),
-        VerificationCodeForgotPassword.routeName: (context) =>
-            const VerificationCodeForgotPassword(),
-        CreateNewPassword.routeName: (context) => const CreateNewPassword(),
-        HomeScreen.routeName: (context) => const HomeScreen(),
-        MenCategory.routeName: (context) => const MenCategory(),
-        LayoutPage.routeName: (context) => const LayoutPage(),
-        EditProfilePage.routeName: (context) => EditProfilePage(),
-        ChangepasswordPage.routeName: (context) => const ChangepasswordPage(),
-        PaymentPage.routName: (context) => const PaymentPage(),
-        NewCardEditPage.routeName: (context) => const NewCardEditPage(),
-        OrdersPage.routeName: (context) => const OrdersPage(),
-        DetailsPage.routeName: (context) => const DetailsPage(),
-        WomenCategory.routeName: (context) => const WomenCategory(),
-        ChildrenCategory.routeName: (context) => const ChildrenCategory(),
-        OverviewPage.routeName: (context) => const OverviewPage(),
-        SearchPage.routeName: (context) => const SearchPage(),
-        CartPage.routeName: (context) => const CartPage(),
-        CheckoutPage.routeName: (context) => const CheckoutPage(),
-        NewCardPage.routeName: (context) => const NewCardPage(),
-        AddAddressPage.routeName: (context) => AddAddressPage(),
-        LoginPage.routeName: (context) => const LoginPage(),
-        SignUpPage.routeName: (context) => const SignUpPage(),
-      },
+    return BlocProvider(
+      create: (context) => FavoriteCubit(),
+      child: MaterialApp(
+        title: 'B&SStore',
+        debugShowCheckedModeBanner: false,
+        initialRoute: HomeScreen.routeName,
+        routes: {
+          SplashScreen.routeName: (context) => const SplashScreen(),
+          SettingPage.routeName: (context) => const SettingPage(),
+          GetStartedScreen.routeName: (context) => const GetStartedScreen(),
+          ForgotPassword.routeName: (context) => ForgotPassword(),
+          VerificationCodeSignUp.routeName: (context) =>
+              const VerificationCodeSignUp(),
+          VerificationCodeForgotPassword.routeName: (context) =>
+              const VerificationCodeForgotPassword(),
+          CreateNewPassword.routeName: (context) => const CreateNewPassword(),
+          HomeScreen.routeName: (context) => const HomeScreen(),
+          MenCategory.routeName: (context) => const MenCategory(),
+          LayoutPage.routeName: (context) => const LayoutPage(),
+          EditProfilePage.routeName: (context) => EditProfilePage(),
+          ChangepasswordPage.routeName: (context) => const ChangepasswordPage(),
+          PaymentPage.routName: (context) => const PaymentPage(),
+          NewCardEditPage.routeName: (context) => const NewCardEditPage(),
+          OrdersPage.routeName: (context) => const OrdersPage(),
+          DetailsPage.routeName: (context) => const DetailsPage(),
+          WomenCategory.routeName: (context) => const WomenCategory(),
+          ChildrenCategory.routeName: (context) => const ChildrenCategory(),
+          OverviewPage.routeName: (context) => const OverviewPage(),
+          SearchPage.routeName: (context) => const SearchPage(),
+          CartPage.routeName: (context) => const CartPage(),
+          CheckoutPage.routeName: (context) => const CheckoutPage(),
+          NewCardPage.routeName: (context) => const NewCardPage(),
+          AddAddressPage.routeName: (context) => AddAddressPage(),
+          LoginPage.routeName: (context) => const LoginPage(),
+          SignUpPage.routeName: (context) => const SignUpPage(),
+        },
+      ),
     );
   }
 }

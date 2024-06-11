@@ -5,6 +5,7 @@ import 'package:e_commerce/Components/feature_products.dart';
 import 'package:e_commerce/Components/home_screen_category_top.dart';
 import 'package:e_commerce/Components/search_bar.dart';
 import 'package:e_commerce/pages/Home_Screen/men_category.dart';
+import 'package:e_commerce/pages/Search_Sreen/search_page.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -17,6 +18,8 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+    bool isFavorite = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,8 +37,19 @@ class _HomeScreenState extends State<HomeScreen> {
           Padding(
             padding: const EdgeInsets.only(right: 8),
             child: IconButton(
-              onPressed: () => {},
-              icon: const Icon(Icons.favorite_border),
+              onPressed: () => {
+                setState(
+                  () {
+                    isFavorite = !isFavorite;
+                  },
+                ),
+              },
+              icon: isFavorite
+                  ? const Icon(
+                      Icons.favorite_sharp,
+                      color: Colors.red,
+                    )
+                  : const Icon(Icons.favorite_border),
               style: const ButtonStyle(
                 iconColor: WidgetStatePropertyAll(Colors.grey),
                 iconSize: WidgetStatePropertyAll(30),
@@ -51,7 +65,9 @@ class _HomeScreenState extends State<HomeScreen> {
             const SizedBox(
               height: 10,
             ),
-            const MySearchBar(),
+            GestureDetector(onTap: () {
+                Navigator.pushNamed(context, SearchPage.routeName);
+              },child: const MySearchBar()),
             const SizedBox(
               height: 25,
             ),

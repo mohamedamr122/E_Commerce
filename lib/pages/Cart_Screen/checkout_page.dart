@@ -8,9 +8,16 @@ import 'package:e_commerce/Components/total_price_container.dart';
 import 'package:e_commerce/pages/Payment_Pages/payment_page.dart';
 import 'package:flutter/material.dart';
 
-class CheckoutPage extends StatelessWidget {
+class CheckoutPage extends StatefulWidget {
   const CheckoutPage({super.key});
   static const String routeName = 'CheckoutPage';
+
+  @override
+  State<CheckoutPage> createState() => _CheckoutPageState();
+}
+
+class _CheckoutPageState extends State<CheckoutPage> {
+  bool isFavorite = false;
 
   @override
   Widget build(BuildContext context) {
@@ -22,8 +29,19 @@ class CheckoutPage extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(right: 8),
             child: IconButton(
-              onPressed: () => {},
-              icon: const Icon(Icons.favorite_border),
+              onPressed: () => {
+                setState(
+                  () {
+                    isFavorite = !isFavorite;
+                  },
+                ),
+              },
+              icon: isFavorite
+                  ? const Icon(
+                      Icons.favorite_sharp,
+                      color: Colors.red,
+                    )
+                  : const Icon(Icons.favorite_border),
               style: const ButtonStyle(
                 iconColor: WidgetStatePropertyAll(Colors.grey),
                 iconSize: WidgetStatePropertyAll(30),

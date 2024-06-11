@@ -3,11 +3,19 @@ import 'package:e_commerce/Components/categories_women_shop.dart';
 import 'package:e_commerce/Components/created_for_you_womens.dart';
 import 'package:e_commerce/Components/product_list_view.dart';
 import 'package:e_commerce/Components/search_bar.dart';
+import 'package:e_commerce/pages/Search_Sreen/search_page.dart';
 import 'package:flutter/material.dart';
 
-class WomenCategory extends StatelessWidget {
+class WomenCategory extends StatefulWidget {
   static const String routeName = 'WomenCategory';
   const WomenCategory({super.key});
+
+  @override
+  State<WomenCategory> createState() => _WomenCategoryState();
+}
+
+class _WomenCategoryState extends State<WomenCategory> {
+  bool isFavorite = false;
 
   @override
   Widget build(BuildContext context) {
@@ -20,8 +28,19 @@ class WomenCategory extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(right: 8),
             child: IconButton(
-              onPressed: () => {},
-              icon: const Icon(Icons.favorite_border),
+              onPressed: () => {
+                setState(
+                  () {
+                    isFavorite = !isFavorite;
+                  },
+                ),
+              },
+              icon: isFavorite
+                  ? const Icon(
+                      Icons.favorite_sharp,
+                      color: Colors.red,
+                    )
+                  : const Icon(Icons.favorite_border),
               style: const ButtonStyle(
                 iconColor: WidgetStatePropertyAll(Colors.grey),
                 iconSize: WidgetStatePropertyAll(30),
@@ -37,7 +56,11 @@ class WomenCategory extends StatelessWidget {
           slivers: [
             SliverList(
               delegate: SliverChildListDelegate([
-                const MySearchBar(),
+                GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(context, SearchPage.routeName);
+                    },
+                    child: const MySearchBar()),
                 const SizedBox(
                   height: 20,
                 ),
@@ -132,7 +155,7 @@ class WomenCategory extends StatelessWidget {
                 ),
               ]),
             ),
-            const ProductListView(),
+            ProductListView(),
           ],
         ),
       ),

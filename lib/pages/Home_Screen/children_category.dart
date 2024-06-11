@@ -2,11 +2,19 @@ import 'package:e_commerce/Components/app_bar_text.dart';
 import 'package:e_commerce/Components/categories_men_shop.dart';
 import 'package:e_commerce/Components/product_list_view.dart';
 import 'package:e_commerce/Components/search_bar.dart';
+import 'package:e_commerce/pages/Search_Sreen/search_page.dart';
 import 'package:flutter/material.dart';
 
-class ChildrenCategory extends StatelessWidget {
+class ChildrenCategory extends StatefulWidget {
   static const String routeName = 'ChildrenCategory';
   const ChildrenCategory({super.key});
+
+  @override
+  State<ChildrenCategory> createState() => _ChildrenCategoryState();
+}
+
+class _ChildrenCategoryState extends State<ChildrenCategory> {
+    bool isFavorite = false;
 
   @override
   Widget build(BuildContext context) {
@@ -19,8 +27,19 @@ class ChildrenCategory extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(right: 8),
             child: IconButton(
-              onPressed: () => {},
-              icon: const Icon(Icons.favorite_border),
+              onPressed: () => {
+                setState(
+                  () {
+                    isFavorite = !isFavorite;
+                  },
+                ),
+              },
+              icon: isFavorite
+                  ? const Icon(
+                      Icons.favorite_sharp,
+                      color: Colors.red,
+                    )
+                  : const Icon(Icons.favorite_border),
               style: const ButtonStyle(
                 iconColor: WidgetStatePropertyAll(Colors.grey),
                 iconSize: WidgetStatePropertyAll(30),
@@ -37,7 +56,10 @@ class ChildrenCategory extends StatelessWidget {
             SliverList(
               delegate: SliverChildListDelegate(
                 [
-                   const MySearchBar(),
+                   GestureDetector(onTap: () {
+                Navigator.pushNamed(context, SearchPage.routeName);
+              },
+                    child: const MySearchBar()),
                   const SizedBox(
                     height: 20,
                   ),
@@ -127,7 +149,7 @@ class ChildrenCategory extends StatelessWidget {
                 ],
               ),
             ),
-            const ProductListView(),
+             ProductListView(),
           ],
         ),
       ),

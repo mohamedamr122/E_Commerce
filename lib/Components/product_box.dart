@@ -1,12 +1,14 @@
 import 'package:e_commerce/Components/navigator_button.dart';
+import 'package:e_commerce/cubit/favorite_cubit.dart';
+import 'package:e_commerce/models/product_model.dart';
+import 'package:e_commerce/pages/Cart_Screen/cart_page.dart';
 import 'package:e_commerce/pages/Home_Screen/overview_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ProductBox extends StatelessWidget {
-  const ProductBox({
-    super.key,
-  });
-
+  const ProductBox({super.key, required this.product});
+  final ProductModel product;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -29,12 +31,25 @@ class ProductBox extends StatelessWidget {
                     image: AssetImage('assets/main_screen/PRINTED SHIRT.png')),
                 borderRadius: BorderRadius.circular(10),
               ),
-              child: IconButton(
-                onPressed: () {},
-                icon: const Icon(
-                  Icons.favorite_outline_rounded,
-                  size: 30,
-                ),
+              child: BlocBuilder<FavoriteCubit, FavoriteState>(
+                builder: (context, state) {
+                  final isFavorite = state.favorite.contains(product);
+                  return IconButton(
+                    onPressed: () {
+                      final favoritesCubit = context.read<FavoriteCubit>();
+                      if (isFavorite) {
+                        favoritesCubit.removeFavorite(product);
+                      } else {
+                        favoritesCubit.addToFavorites(product);
+                      }
+                    },
+                    icon: Icon(
+                      isFavorite ? Icons.favorite : Icons.favorite_border,
+                      color: isFavorite ? Colors.red : null,
+                      size: 30,
+                    ),
+                  );
+                },
               ),
             ),
           ),
@@ -95,7 +110,9 @@ class ProductBox extends StatelessWidget {
               ),
               MyNavigatorButton(
                   textColor: Colors.black,
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.pushNamed(context, CartPage.routeName); 
+                  },
                   height: 53,
                   width: 185,
                   color: const Color(0xffF2F2F2),

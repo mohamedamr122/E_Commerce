@@ -3,11 +3,19 @@ import 'package:e_commerce/Components/categories_men_shop.dart';
 import 'package:e_commerce/Components/created_for_you_mens.dart';
 import 'package:e_commerce/Components/product_list_view.dart';
 import 'package:e_commerce/Components/search_bar.dart';
+import 'package:e_commerce/pages/Search_Sreen/search_page.dart';
 import 'package:flutter/material.dart';
 
-class MenCategory extends StatelessWidget {
+class MenCategory extends StatefulWidget {
   static const String routeName = 'MenCategory';
   const MenCategory({super.key});
+
+  @override
+  State<MenCategory> createState() => _MenCategoryState();
+}
+
+class _MenCategoryState extends State<MenCategory> {
+    bool isFavorite = false;
 
   @override
   Widget build(BuildContext context) {
@@ -20,8 +28,19 @@ class MenCategory extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(right: 8),
             child: IconButton(
-              onPressed: () => {},
-              icon: const Icon(Icons.favorite_border),
+              onPressed: () => {
+                setState(
+                  () {
+                    isFavorite = !isFavorite;
+                  },
+                ),
+              },
+              icon: isFavorite
+                  ? const Icon(
+                      Icons.favorite_sharp,
+                      color: Colors.red,
+                    )
+                  : const Icon(Icons.favorite_border),
               style: const ButtonStyle(
                 iconColor: WidgetStatePropertyAll(Colors.grey),
                 iconSize: WidgetStatePropertyAll(30),
@@ -38,7 +57,9 @@ class MenCategory extends StatelessWidget {
             SliverList(
               delegate: SliverChildListDelegate(
                 [
-                  const MySearchBar(),
+                  GestureDetector(onTap: () {
+                Navigator.pushNamed(context, SearchPage.routeName);
+              },child: const MySearchBar()),
                   const SizedBox(
                     height: 20,
                   ),
@@ -132,7 +153,7 @@ class MenCategory extends StatelessWidget {
                 ],
               ),
             ),
-            const ProductListView(),
+             ProductListView(),
           ],
         ),
       ),

@@ -3,6 +3,7 @@ import 'package:e_commerce/Components/product_list_view.dart';
 import 'package:e_commerce/Components/overview_product_photo.dart';
 import 'package:e_commerce/Components/search_bar.dart';
 import 'package:e_commerce/Components/size_container.dart';
+import 'package:e_commerce/pages/Search_Sreen/search_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
@@ -15,6 +16,8 @@ class OverviewPage extends StatefulWidget {
 }
 
 class _OverviewPageState extends State<OverviewPage> {
+    bool isFavorite = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,8 +31,19 @@ class _OverviewPageState extends State<OverviewPage> {
           Padding(
             padding: const EdgeInsets.only(right: 8),
             child: IconButton(
-              onPressed: () => {},
-              icon: const Icon(Icons.favorite_border),
+              onPressed: () => {
+                setState(
+                  () {
+                    isFavorite = !isFavorite;
+                  },
+                ),
+              },
+              icon: isFavorite
+                  ? const Icon(
+                      Icons.favorite_sharp,
+                      color: Colors.red,
+                    )
+                  : const Icon(Icons.favorite_border),
               style: const ButtonStyle(
                 iconColor: WidgetStatePropertyAll(Colors.grey),
                 iconSize: WidgetStatePropertyAll(30),
@@ -46,7 +60,9 @@ class _OverviewPageState extends State<OverviewPage> {
             SliverList(
               delegate: SliverChildListDelegate(
                 [
-                  const MySearchBar(),
+                  GestureDetector(onTap: () {
+                Navigator.pushNamed(context, SearchPage.routeName);
+              },child: const MySearchBar()),
                   const SizedBox(
                     height: 20,
                   ),
@@ -211,7 +227,7 @@ class _OverviewPageState extends State<OverviewPage> {
                 ],
               ),
             ),
-            const ProductListView()
+             ProductListView()
           ],
         ),
       ),
