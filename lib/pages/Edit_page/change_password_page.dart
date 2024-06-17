@@ -38,7 +38,7 @@ class _ChangepasswordPageState extends State<ChangepasswordPage> {
               'Current password',
               style: TextStyle(fontWeight: FontWeight.w400),
             ),
-            MyTextField(
+            MyTextField(keyboardType: TextInputType.visiblePassword,
               fillColor: Colors.white,
               suffixIcon: IconButton(
                   onPressed: () {
@@ -72,7 +72,7 @@ class _ChangepasswordPageState extends State<ChangepasswordPage> {
               'New password',
               style: TextStyle(fontWeight: FontWeight.w400),
             ),
-            MyTextField(
+            MyTextField(keyboardType: TextInputType.visiblePassword,
               fillColor: Colors.white,
               suffixIcon: IconButton(
                   onPressed: () {
@@ -106,7 +106,7 @@ class _ChangepasswordPageState extends State<ChangepasswordPage> {
               'Confirm password',
               style: TextStyle(fontWeight: FontWeight.w400),
             ),
-            MyTextField(
+            MyTextField(keyboardType: TextInputType.visiblePassword,
               fillColor: Colors.white,
               suffixIcon: IconButton(
                   onPressed: () {

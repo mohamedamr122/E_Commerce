@@ -35,7 +35,7 @@ class AddAddressPage extends StatelessWidget {
             'Additional Address Details',
             style: TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
           ),
-          MyTextField(
+          MyTextField(keyboardType: null,
               fillColor: Colors.white,
               suffixIcon: null,
               lablelText: 'where do you want us to drop the package?',
@@ -59,7 +59,7 @@ class AddAddressPage extends StatelessWidget {
           const SizedBox(
             height: 5,
           ),
-          MyTextField(
+          MyTextField(keyboardType: null,
               fillColor: Colors.white,
               suffixIcon: null,
               lablelText: 'Enter your number with code',
@@ -76,7 +76,7 @@ class AddAddressPage extends StatelessWidget {
           const SizedBox(
             height: 5,
           ),
-          MyTextField(
+          MyTextField(keyboardType: null,
               fillColor: Colors.white,
               suffixIcon: null,
               lablelText: 'Enter your first name',
@@ -93,7 +93,7 @@ class AddAddressPage extends StatelessWidget {
           const SizedBox(
             height: 5,
           ),
-          MyTextField(
+          MyTextField(keyboardType: null,
               fillColor: Colors.white,
               suffixIcon: null,
               lablelText: 'Enter your last name',

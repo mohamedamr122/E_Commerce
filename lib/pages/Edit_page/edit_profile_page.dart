@@ -29,6 +29,7 @@ class EditProfilePage extends StatelessWidget {
             style: TextStyle(fontWeight: FontWeight.w400),
           ),
           MyTextField(
+            keyboardType: null,
             fillColor: Colors.white,
             suffixIcon: null,
             validator: (firstName) {
@@ -49,6 +50,7 @@ class EditProfilePage extends StatelessWidget {
             style: TextStyle(fontWeight: FontWeight.w400),
           ),
           MyTextField(
+            keyboardType: null,
             fillColor: Colors.white,
             suffixIcon: null,
             validator: (lastName) {
@@ -69,6 +71,7 @@ class EditProfilePage extends StatelessWidget {
             style: TextStyle(fontWeight: FontWeight.w400),
           ),
           MyTextField(
+            keyboardType: TextInputType.phone,
             fillColor: Colors.white,
             suffixIcon: null,
             validator: (mobileNumber) {
@@ -89,6 +92,7 @@ class EditProfilePage extends StatelessWidget {
             style: TextStyle(fontWeight: FontWeight.w400),
           ),
           MyTextField(
+            keyboardType: TextInputType.emailAddress,
             fillColor: Colors.white,
             suffixIcon: null,
             validator: (email) {
@@ -109,7 +113,8 @@ class EditProfilePage extends StatelessWidget {
             style: TextStyle(fontWeight: FontWeight.w400),
           ),
           MyTextField(
-            fillColor: Colors.white,
+            keyboardType: TextInputType.visiblePassword,
+                        fillColor: Colors.white,
             suffixIcon: null,
             validator: (password) {
               if (password!.isEmpty) {

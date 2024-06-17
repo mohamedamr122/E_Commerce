@@ -1,5 +1,4 @@
 import 'package:e_commerce/Components/my_text_Field.dart';
-import 'package:e_commerce/pages/Home_Screen/layout_page.dart';
 import 'package:e_commerce/pages/LogIn_SignUp_Pages/forgot_password.dart';
 import 'package:e_commerce/pages/LogIn_SignUp_Pages/signup_page.dart';
 import 'package:flutter/material.dart';
@@ -51,6 +50,7 @@ class _LoginPageState extends State<LoginPage> {
                 height: 30,
               ),
               MyTextField(
+                keyboardType: TextInputType.emailAddress,
                 fillColor: const Color(0xffEEEEEE),
                 suffixIcon: null,
                 validator: (email) {
@@ -70,14 +70,16 @@ class _LoginPageState extends State<LoginPage> {
                 height: 30,
               ),
               MyTextField(
+                keyboardType: TextInputType.visiblePassword,
                 fillColor: const Color(0xffEEEEEE),
                 suffixIcon: IconButton(
-              onPressed: () {
-                setState(() {
-                  secureText = !secureText;
-                });
-              },
-              icon: Icon(secureText ? Icons.visibility_off : Icons.visibility)),
+                    onPressed: () {
+                      setState(() {
+                        secureText = !secureText;
+                      });
+                    },
+                    icon: Icon(
+                        secureText ? Icons.visibility_off : Icons.visibility)),
                 validator: (password) {
                   RegExp regex = RegExp(
                       r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#\$&*~]).{8,}$');
@@ -110,10 +112,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
               ElevatedButton(
                 onPressed: () {
-                  if (_formKey.currentState!.validate()) {
-                    Navigator.of(context).pushNamedAndRemoveUntil(
-                        LayoutPage.routeName, (route) => false);
-                  }
+                  if (_formKey.currentState!.validate()) {}
                 },
                 style: const ButtonStyle(
                   backgroundColor: WidgetStatePropertyAll(

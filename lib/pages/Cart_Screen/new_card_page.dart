@@ -69,7 +69,7 @@ class NewCardPage extends StatelessWidget {
               ),
             ),
           ),
-          MyTextField(
+          MyTextField(keyboardType: null,
             lablelText: 'Enter your card number',
             obscureText: false,
             suffixIcon: null,

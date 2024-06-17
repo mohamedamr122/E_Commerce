@@ -43,7 +43,7 @@ class ForgotPassword extends StatelessWidget {
                 const SizedBox(
                   height: 50,
                 ),
-                MyTextField(
+                MyTextField(keyboardType: TextInputType.emailAddress,
                   fillColor: const Color(0xffEEEEEE),
                   suffixIcon: null,
                   validator: (email) {

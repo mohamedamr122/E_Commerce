@@ -8,17 +8,17 @@ import 'package:e_commerce/pages/Home_Screen/men_category.dart';
 import 'package:e_commerce/pages/Search_Sreen/search_page.dart';
 import 'package:flutter/material.dart';
 
-class HomeScreen extends StatefulWidget {
-  static const String routeName = 'Home Screen';
+class HomePage extends StatefulWidget {
+  static const String routeName = 'HomePage';
 
-  const HomeScreen({super.key});
+  const HomePage({super.key});
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<HomePage> createState() => _HomePageState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
-    bool isFavorite = false;
+class _HomePageState extends State<HomePage> {
+  bool isFavorite = false;
 
   @override
   Widget build(BuildContext context) {
@@ -65,9 +65,11 @@ class _HomeScreenState extends State<HomeScreen> {
             const SizedBox(
               height: 10,
             ),
-            GestureDetector(onTap: () {
-                Navigator.pushNamed(context, SearchPage.routeName);
-              },child: const MySearchBar()),
+            GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, SearchPage.routeName);
+                },
+                child: const MySearchBar()),
             const SizedBox(
               height: 25,
             ),

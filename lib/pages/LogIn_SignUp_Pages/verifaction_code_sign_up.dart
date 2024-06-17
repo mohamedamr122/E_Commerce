@@ -75,7 +75,7 @@ class VerificationCodeSignUp extends StatelessWidget {
             ElevatedButton(
               onPressed: () {
                 Navigator.of(context).pushNamedAndRemoveUntil(
-                    HomeScreen.routeName, (route) => false);
+                    HomePage.routeName, (route) => false);
               },
               style: const ButtonStyle(
                 backgroundColor: MaterialStatePropertyAll(

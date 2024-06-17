@@ -37,6 +37,7 @@ class NewCardEditPage extends StatelessWidget {
             ),
           ),
           MyTextField(
+            keyboardType: null,
             lablelText: '',
             obscureText: false,
             suffixIcon: null,
@@ -57,6 +58,7 @@ class NewCardEditPage extends StatelessWidget {
             ),
           ),
           MyTextField(
+            keyboardType: null,
             lablelText: '',
             obscureText: false,
             suffixIcon: null,

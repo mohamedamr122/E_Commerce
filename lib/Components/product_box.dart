@@ -1,5 +1,5 @@
 import 'package:e_commerce/Components/navigator_button.dart';
-import 'package:e_commerce/cubit/favorite_cubit.dart';
+import 'package:e_commerce/cubit/favorite/favorite_cubit.dart';
 import 'package:e_commerce/models/product_model.dart';
 import 'package:e_commerce/pages/Cart_Screen/cart_page.dart';
 import 'package:e_commerce/pages/Home_Screen/overview_page.dart';

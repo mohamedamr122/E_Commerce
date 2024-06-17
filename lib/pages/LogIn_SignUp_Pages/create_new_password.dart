@@ -77,7 +77,7 @@ class _CreateNewPasswordState extends State<CreateNewPassword> {
             ElevatedButton(
               onPressed: () {
                 Navigator.of(context).pushNamedAndRemoveUntil(
-                    HomeScreen.routeName, (route) => false);
+                    HomePage.routeName, (route) => false);
               },
               style: const ButtonStyle(
                 backgroundColor: WidgetStatePropertyAll(
@@ -134,15 +134,16 @@ class _CreateNewPasswordState extends State<CreateNewPassword> {
               const SizedBox(
                 height: 81,
               ),
-              MyTextField(
+              MyTextField(keyboardType: TextInputType.visiblePassword,
                 fillColor: const Color(0xffEEEEEE),
                 suffixIcon: IconButton(
-              onPressed: () {
-                setState(() {
-                  secureText = !secureText;
-                });
-              },
-              icon: Icon(secureText ? Icons.visibility_off : Icons.visibility)),
+                    onPressed: () {
+                      setState(() {
+                        secureText = !secureText;
+                      });
+                    },
+                    icon: Icon(
+                        secureText ? Icons.visibility_off : Icons.visibility)),
                 validator: (password) {
                   RegExp regex = RegExp(
                       r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#\$&*~]).{8,}$');
@@ -164,14 +165,16 @@ class _CreateNewPasswordState extends State<CreateNewPassword> {
                 height: 25,
               ),
               MyTextField(
+                keyboardType: TextInputType.visiblePassword,
                 fillColor: const Color(0xffEEEEEE),
                 suffixIcon: IconButton(
-              onPressed: () {
-                setState(() {
-                  secureText = !secureText;
-                });
-              },
-              icon: Icon(secureText ? Icons.visibility_off : Icons.visibility)),
+                    onPressed: () {
+                      setState(() {
+                        secureText = !secureText;
+                      });
+                    },
+                    icon: Icon(
+                        secureText ? Icons.visibility_off : Icons.visibility)),
                 validator: (confirmPassword) {
                   RegExp regex = RegExp(
                       r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#\$&*~]).{8,}$');

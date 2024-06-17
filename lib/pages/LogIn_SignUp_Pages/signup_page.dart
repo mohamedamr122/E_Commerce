@@ -1,10 +1,9 @@
 import 'package:e_commerce/Components/my_text_Field.dart';
 import 'package:e_commerce/pages/LogIn_SignUp_Pages/login_page.dart';
-import 'package:e_commerce/pages/LogIn_SignUp_Pages/verifaction_code_sign_up.dart';
 import 'package:flutter/material.dart';
 
 class SignUpPage extends StatefulWidget {
-  static const String routeName = 'SignuP';
+  static const String routeName = 'SignUp';
   const SignUpPage({super.key});
 
   @override
@@ -12,9 +11,7 @@ class SignUpPage extends StatefulWidget {
 }
 
 class _SignUpPageState extends State<SignUpPage> {
-  final firstNameController = TextEditingController();
-
-  final lastNameController = TextEditingController();
+  final usertNameController = TextEditingController();
 
   final emailController = TextEditingController();
 
@@ -23,6 +20,7 @@ class _SignUpPageState extends State<SignUpPage> {
   final confirmPasswordController = TextEditingController();
 
   final _formKey = GlobalKey<FormState>();
+  String pattern = '([a-zA-Z])';
 
   bool secureText = true;
   RegExp regex =
@@ -55,47 +53,28 @@ class _SignUpPageState extends State<SignUpPage> {
                 const SizedBox(
                   height: 50,
                 ),
-                Row(
-                  children: [
-                    Flexible(
-                      child: MyTextField(
-                        fillColor: const Color(0xffEEEEEE),
-                        suffixIcon: null,
-                        validator: (firstName) {
-                          if (firstName!.isEmpty) {
-                            return 'this field is required';
-                          }
-                          return null;
-                        },
-                        controller: firstNameController,
-                        lablelText: 'First Name',
-                        obscureText: false,
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 10,
-                    ),
-                    Flexible(
-                      child: MyTextField(
-                        fillColor: const Color(0xffEEEEEE),
-                        suffixIcon: null,
-                        validator: (lastName) {
-                          if (lastName!.isEmpty) {
-                            return 'this field is required';
-                          }
-                          return null;
-                        },
-                        controller: lastNameController,
-                        lablelText: 'Last Name',
-                        obscureText: false,
-                      ),
-                    ),
-                  ],
+                MyTextField(
+                  keyboardType: null,
+                  fillColor: const Color(0xffEEEEEE),
+                  suffixIcon: null,
+                  validator: (userName) {
+                    RegExp regExp = RegExp(pattern);
+                    if (userName == null ||
+                        userName.isEmpty ||
+                        !regExp.hasMatch(userName)) {
+                      return 'Invalid user name';
+                    }
+                    return null;
+                  },
+                  controller: usertNameController,
+                  lablelText: 'User Name',
+                  obscureText: false,
                 ),
                 const SizedBox(
                   height: 20,
                 ),
                 MyTextField(
+                  keyboardType: TextInputType.emailAddress,
                   fillColor: const Color(0xffEEEEEE),
                   suffixIcon: null,
                   validator: (email) {
@@ -115,6 +94,7 @@ class _SignUpPageState extends State<SignUpPage> {
                   height: 20,
                 ),
                 MyTextField(
+                  keyboardType: TextInputType.visiblePassword,
                   fillColor: const Color(0xffEEEEEE),
                   suffixIcon: IconButton(
                       onPressed: () {
@@ -144,6 +124,7 @@ class _SignUpPageState extends State<SignUpPage> {
                   height: 20,
                 ),
                 MyTextField(
+                  keyboardType: TextInputType.visiblePassword,
                   fillColor: const Color(0xffEEEEEE),
                   suffixIcon: IconButton(
                       onPressed: () {
@@ -155,13 +136,9 @@ class _SignUpPageState extends State<SignUpPage> {
                           ? Icons.visibility_off
                           : Icons.visibility)),
                   validator: (confirmPassword) {
-                    var passNonNullValue = confirmPassword ?? "";
-                    if (passNonNullValue.isEmpty) {
-                      return ("Password not match");
-                    } else if (passNonNullValue.length < 8) {
-                      return ("Password Must be more than 5 characters");
-                    } else if (!regex.hasMatch(passNonNullValue)) {
-                      return ("Password should contain upper,lower,digit and Special character ");
+                    if (passwordController.text !=
+                        confirmPasswordController.text) {
+                      return ('Password not matching');
                     }
                     return null;
                   },
@@ -176,8 +153,7 @@ class _SignUpPageState extends State<SignUpPage> {
                   onPressed: () {
                     if (passwordController == confirmPasswordController ||
                         _formKey.currentState!.validate()) {
-                      Navigator.of(context)
-                          .pushNamed(VerificationCodeSignUp.routeName);
+                      
                     }
                   },
                   style: const ButtonStyle(

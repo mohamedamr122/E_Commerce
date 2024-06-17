@@ -9,6 +9,7 @@ class MyTextField extends StatelessWidget {
   final String lablelText;
   final String? Function(String?)? validator;
   final Color? fillColor;
+ final TextInputType? keyboardType;
   Widget? suffixIcon;
   MyTextField({
     super.key,
@@ -17,12 +18,13 @@ class MyTextField extends StatelessWidget {
     required this.lablelText,
     required this.obscureText,
     required this.controller,
-    required this.validator,
+    required this.validator,required this.keyboardType,
   });
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      keyboardType: keyboardType,
       autovalidateMode: AutovalidateMode.onUserInteraction,
       validator: validator,
       controller: controller,
