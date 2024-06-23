@@ -21,6 +21,7 @@ class _MenCategoryState extends State<MenCategory> {
   Widget build(BuildContext context) {
     return Scaffold(
             appBar: AppBar(
+              elevation: 0,
               leadingWidth: 66,
               title: const AppBarText(text: 'Men'),
               centerTitle: true,

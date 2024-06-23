@@ -8,7 +8,7 @@ class ProductListView extends StatelessWidget {
   });
   final List<ProductModel> products = [
     ProductModel(
-        photo: 'photo',
+        imageUrl: 'photo',
         companyName: 'sanff',
         productType: 'asfwfw',
         price: '36',
@@ -16,7 +16,7 @@ class ProductListView extends StatelessWidget {
         date: '10',
         time: '20'),
     ProductModel(
-        photo: 'photo',
+        imageUrl: 'photo',
         companyName: 'sanff',
         productType: 'asfwfw',
         price: '36',
@@ -24,7 +24,7 @@ class ProductListView extends StatelessWidget {
         date: '10',
         time: '20'),
     ProductModel(
-        photo: 'photo',
+        imageUrl: 'photo',
         companyName: 'sanff',
         productType: 'asfwfw',
         price: '36',
@@ -32,7 +32,7 @@ class ProductListView extends StatelessWidget {
         date: '10',
         time: '20'),
     ProductModel(
-        photo: 'photo',
+        imageUrl: 'photo',
         companyName: 'sanff',
         productType: 'asfwfw',
         price: '36',

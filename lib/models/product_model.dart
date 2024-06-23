@@ -1,5 +1,7 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+
 class ProductModel {
-  final String photo;
+  final String imageUrl;
   final String companyName;
   final String productType;
   final String price;
@@ -8,21 +10,21 @@ class ProductModel {
   final String time;
 
   ProductModel(
-      {required this.photo,
+      {required this.imageUrl,
       required this.companyName,
       required this.productType,
       required this.price,
       required this.discount,
       required this.date,
       required this.time});
-  factory ProductModel.fromjson(json) {
+  factory ProductModel.fromFireStore(DocumentSnapshot snapshot) {
     return ProductModel(
-        photo: json['photo'],
-        companyName: json['companyName'],
-        productType: json['productType'],
-        price: json['price'],
-        discount: json['discount'],
-        date: json['data'],
-        time: json['time']);
+        imageUrl: snapshot.get('imageUrl'),
+        companyName: snapshot.get('companyName'),
+        date: snapshot.get('date'),
+        discount: snapshot.get('discount'),
+        price: snapshot.get('price'),
+        productType: snapshot.get('productType'),
+        time: snapshot.get('time'));
   }
 }

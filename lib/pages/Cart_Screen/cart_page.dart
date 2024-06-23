@@ -30,20 +30,12 @@ class _CartPageState extends State<CartPage> {
         title: const AppBarText(text: 'BSB'),
         leading: Row(
           children: [
-            IconButton(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              icon: const Icon(
-                Icons.arrow_back_ios_new_rounded,
-              ),
-            ),
             const Text(
-              'Cart ',
+              'Cart',
               style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
             ),
             Text(
-              '($selectedValue Item)',
+              ' ($selectedValue Item)',
               style: const TextStyle(
                   fontSize: 13,
                   fontWeight: FontWeight.w700,

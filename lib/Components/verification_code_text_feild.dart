@@ -12,14 +12,14 @@ class VerificationCodeTextField extends StatelessWidget {
         border: Border.all(
           color: Colors.grey,
         ),
-        color: Colors.grey[100],
+        color: Colors.grey[50],
         borderRadius: BorderRadius.circular(7),
       ),
       height: 49,
       width: 57,
       child: TextFormField(
-        onChanged: (value) {
-          if (value.length == 1) {
+        onChanged: (value){
+          if (value.length == 1){
             FocusScope.of(context).nextFocus();
           }
         },
@@ -29,10 +29,7 @@ class VerificationCodeTextField extends StatelessWidget {
         textAlign: TextAlign.center,
         keyboardType: TextInputType.number,
         style: Theme.of(context).textTheme.titleLarge,
-        inputFormatters: [
-          LengthLimitingTextInputFormatter(1),
-          FilteringTextInputFormatter.digitsOnly
-        ],
+        inputFormatters: [LengthLimitingTextInputFormatter(1),FilteringTextInputFormatter.digitsOnly],
       ),
     );
   }

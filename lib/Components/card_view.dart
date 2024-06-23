@@ -2,14 +2,15 @@ import 'package:flutter/material.dart';
 
 class CardView extends StatelessWidget {
   final String imagePass;
+final  void Function()? onTap;
   final String contentText;
   const CardView(
-      {super.key, required this.contentText, required this.imagePass});
+      {super.key, required this.contentText, required this.imagePass, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => {},
+      onTap: onTap,
       child: Stack(
         children: [
           ClipRRect(

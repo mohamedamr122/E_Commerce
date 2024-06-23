@@ -5,6 +5,7 @@ import 'package:e_commerce/Components/feature_products.dart';
 import 'package:e_commerce/Components/home_screen_category_top.dart';
 import 'package:e_commerce/Components/search_bar.dart';
 import 'package:e_commerce/pages/Home_Screen/men_category.dart';
+import 'package:e_commerce/pages/Home_Screen/sells_page.dart';
 import 'package:e_commerce/pages/Search_Sreen/search_page.dart';
 import 'package:flutter/material.dart';
 
@@ -59,7 +60,7 @@ class _HomePageState extends State<HomePage> {
         ],
       ),
       body: Padding(
-        padding: const EdgeInsets.only(right: 22, left: 22),
+        padding: const EdgeInsets.only(right: 22, left: 22,bottom: 8),
         child: ListView(
           children: [
             const SizedBox(
@@ -101,27 +102,29 @@ class _HomePageState extends State<HomePage> {
                 ),
               ],
             ),
-            const SingleChildScrollView(
+            SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
                 children: [
                   CardView(
                     contentText: 'Fashion Men',
                     imagePass: 'assets/main_screen/fashion_men.jpg',
+                    onTap: () {
+                      Navigator.pushNamed(context, MenCategory.routeName);
+                    },
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 12,
                   ),
                   CardView(
                     contentText: 'New Collection',
                     imagePass: 'assets/main_screen/Woman_New_Collection.jpg',
+                    onTap: () {
+                      // Navigator.pushNamed(context, MenCategory.routeName);
+                    },
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 12,
-                  ),
-                  CardView(
-                    contentText: 'Fashion Men',
-                    imagePass: 'assets/main_screen/fashion_men.jpg',
                   ),
                 ],
               ),
@@ -219,7 +222,9 @@ class _HomePageState extends State<HomePage> {
             ),
             const SizedBox(height: 15),
             GestureDetector(
-              onTap: () => {},
+              onTap: () => {
+                Navigator.pushNamed(context, SellsPage.routeName)
+              },
               child: const ClipRRect(
                 borderRadius: BorderRadius.all(
                   Radius.circular(12),
@@ -232,7 +237,6 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
             ),
-            const SizedBox(height: 30),
           ],
         ),
       ),

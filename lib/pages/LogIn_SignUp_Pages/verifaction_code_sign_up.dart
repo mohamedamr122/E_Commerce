@@ -1,7 +1,6 @@
 import 'package:e_commerce/pages/Home_Screen/home_page.dart';
 import 'package:e_commerce/Components/verification_code_text_feild.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 class VerificationCodeSignUp extends StatelessWidget {
   static const String routeName = 'Verification Code Sign Up';
@@ -78,7 +77,7 @@ class VerificationCodeSignUp extends StatelessWidget {
                     HomePage.routeName, (route) => false);
               },
               style: const ButtonStyle(
-                backgroundColor: MaterialStatePropertyAll(
+                backgroundColor: WidgetStatePropertyAll(
                   Color.fromARGB(255, 16, 87, 43),
                 ),
                 shape: MaterialStatePropertyAll(
@@ -88,7 +87,7 @@ class VerificationCodeSignUp extends StatelessWidget {
                     ),
                   ),
                 ),
-                fixedSize: MaterialStatePropertyAll(
+                fixedSize: WidgetStatePropertyAll(
                   Size(242, 52),
                 ),
               ),

@@ -16,8 +16,9 @@ final class RegisterSuccessState extends AuthState {}
 final class RegisterFailState extends AuthState {
   final String message;
 
-  const RegisterFailState({required this.message});
+  RegisterFailState({required this.message});
 }
+
 final class LoginLoadingState extends AuthState {}
 
 final class LoginSuccessState extends AuthState {}
@@ -27,3 +28,5 @@ final class LoginFailState extends AuthState {
 
   const LoginFailState({required this.message});
 }
+final class FailedToSendUserDateToFireStore extends AuthState {}
+final class SuccessToSendUserDateToFireStore extends AuthState {}

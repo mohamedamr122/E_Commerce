@@ -1,4 +1,5 @@
-import 'package:e_commerce/pages/LogIn_SignUp_Pages/signup_page.dart';
+import 'package:e_commerce/pages/LogIn_SignUp_Pages/choose_signup_page.dart';
+import 'package:e_commerce/pages/LogIn_SignUp_Pages/user_signup_page.dart';
 import 'package:flutter/material.dart';
 
 class GetStartedScreen extends StatelessWidget {
@@ -112,7 +113,7 @@ class GetStartedScreen extends StatelessWidget {
                   child: ElevatedButton(
                     onPressed: () {
                       Navigator.of(context)
-                          .pushReplacementNamed(SignUpPage.routeName);
+                          .pushReplacementNamed(ChooseSignupPage.routeName);
                     },
                     child: const Text('Get Started'),
                   ),
