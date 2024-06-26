@@ -67,7 +67,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         initialRoute: Constants.userID != null
             ? AdminHomePage.routeName
-            : CategoryPage.routeName,
+            : SplashScreen.routeName,
         routes: {
           CategoryPage.routeName :(context)=> const CategoryPage(),
           UploadProductPage.routeName: (context) => const UploadProductPage(),
