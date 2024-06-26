@@ -2,15 +2,15 @@ import 'package:e_commerce/Components/app_bar_text.dart';
 import 'package:e_commerce/Components/my_text_Field.dart';
 import 'package:flutter/material.dart';
 
-class ChangepasswordPage extends StatefulWidget {
-  const ChangepasswordPage({super.key});
-  static const String routeName = 'ChangepasswordPage';
+class ChangePasswordPage extends StatefulWidget {
+  const ChangePasswordPage({super.key});
+  static const String routeName = 'ChangePasswordPage';
 
   @override
-  State<ChangepasswordPage> createState() => _ChangepasswordPageState();
+  State<ChangePasswordPage> createState() => _ChangePasswordPageState();
 }
 
-class _ChangepasswordPageState extends State<ChangepasswordPage> {
+class _ChangePasswordPageState extends State<ChangePasswordPage> {
   final currentPasswordController = TextEditingController();
 
   final newPasswordController = TextEditingController();
@@ -29,7 +29,7 @@ class _ChangepasswordPageState extends State<ChangepasswordPage> {
           backgroundColor: Colors.white,
           elevation: 0,
           centerTitle: true,
-          title: const AppBarText(text: 'B S B')
+          title: const AppBarText(text: 'W in R ')
         ),
         body: ListView(
           padding: const EdgeInsets.all(16),

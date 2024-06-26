@@ -37,16 +37,16 @@ class _AdminHomePageState extends State<AdminHomePage> {
                 Container(
                   height: 120,
                   width: 169,
-                  color: Color(0xffD9D9D9),
+                  color: const Color(0xffD9D9D9),
                 ),
                 Container(
                   height: 120,
                   width: 169,
-                  color: Color(0xffD9D9D9),
+                  color: const Color(0xffD9D9D9),
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Row(
@@ -55,7 +55,7 @@ class _AdminHomePageState extends State<AdminHomePage> {
                 Container(
                   height: 120,
                   width: 169,
-                  color: Color(0xffD9D9D9),
+                  color: const Color(0xffD9D9D9),
                 ),
                 GestureDetector(
                   onTap: () {
@@ -64,8 +64,8 @@ class _AdminHomePageState extends State<AdminHomePage> {
                   child: Container(
                     height: 120,
                     width: 169,
-                    color: Color(0xffD9D9D9),
-                    child: Center(
+                    color: const Color(0xffD9D9D9),
+                    child: const Center(
                       child: Text(
                         '+',
                         style: TextStyle(

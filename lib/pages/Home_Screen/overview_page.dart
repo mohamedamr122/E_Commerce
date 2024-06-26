@@ -24,7 +24,7 @@ class _OverviewPageState extends State<OverviewPage> {
       appBar: AppBar(
         leadingWidth: 66,
         title: const AppBarText(
-          text: 'B&S',
+          text: 'W in R',
         ),
         centerTitle: true,
         actions: [

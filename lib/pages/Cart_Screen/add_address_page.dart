@@ -12,7 +12,7 @@ class AddAddressPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const AppBarText(text: 'BSB'),
+        title: const AppBarText(text: 'W in R '),
       ),
       body: ListView(
         padding: const EdgeInsets.symmetric(horizontal: 16),

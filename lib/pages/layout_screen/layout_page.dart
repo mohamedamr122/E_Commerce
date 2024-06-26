@@ -18,7 +18,7 @@ class _LayoutPageState extends State<LayoutPage> {
   final navPages = [
     const HomePage(),
     const SellsPage(),
-    const CategoryScreen(),
+    const CategoryPage(),
     const AccountPage(),
     const CartPage()
   ];

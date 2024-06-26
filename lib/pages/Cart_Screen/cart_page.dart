@@ -27,7 +27,7 @@ class _CartPageState extends State<CartPage> {
         leadingWidth: 150,
         elevation: 0,
         centerTitle: true,
-        title: const AppBarText(text: 'BSB'),
+        title: const AppBarText(text: 'W in R '),
         leading: Row(
           children: [
             const Text(

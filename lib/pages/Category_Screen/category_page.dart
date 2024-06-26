@@ -6,14 +6,15 @@ import 'package:e_commerce/pages/Home_Screen/women_category.dart';
 import 'package:e_commerce/pages/Search_Sreen/search_page.dart';
 import 'package:flutter/material.dart';
 
-class CategoryScreen extends StatefulWidget {
-  const CategoryScreen({super.key});
+class CategoryPage extends StatefulWidget {
+  const CategoryPage({super.key});
+  static const String routeName = 'CategoryPage';
 
   @override
-  State<CategoryScreen> createState() => _CategoryScreenState();
+  State<CategoryPage> createState() => _CategoryPageState();
 }
 
-class _CategoryScreenState extends State<CategoryScreen> {
+class _CategoryPageState extends State<CategoryPage> {
     bool isFavorite = false;
 
   @override
@@ -22,7 +23,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          text: 'B&S',
+          text: 'W in R',
         ),
         actions: [
           Padding(

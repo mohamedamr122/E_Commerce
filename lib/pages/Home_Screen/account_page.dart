@@ -1,7 +1,6 @@
 import 'package:e_commerce/Components/app_bar_text.dart';
 import 'package:e_commerce/Components/item_button.dart';
 import 'package:e_commerce/cubit/layout/layout_cubit.dart';
-import 'package:e_commerce/cubit/layout/layout_cubit.dart';
 import 'package:e_commerce/pages/Orders_Pages/orders_page.dart';
 import 'package:e_commerce/pages/Payment_Pages/payment_page.dart';
 import 'package:e_commerce/pages/Edit_page/edit_profile_page.dart';
@@ -21,7 +20,7 @@ class AccountPage extends StatelessWidget {
         backgroundColor: Colors.white,
         centerTitle: true,
         elevation: 0,
-        title: const AppBarText(text: 'B S B'),
+        title: const AppBarText(text: 'W in R '),
       ),
       body: BlocConsumer<LayoutCubit, LayoutState>(
         listener: (context, state) {},

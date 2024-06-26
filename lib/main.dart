@@ -5,6 +5,7 @@ import 'package:e_commerce/pages/Cart_Screen/add_address_page.dart';
 import 'package:e_commerce/pages/Cart_Screen/cart_page.dart';
 import 'package:e_commerce/pages/Cart_Screen/checkout_page.dart';
 import 'package:e_commerce/pages/Cart_Screen/new_card_page.dart';
+import 'package:e_commerce/pages/Category_Screen/category_page.dart';
 import 'package:e_commerce/pages/Edit_page/change_password_page.dart';
 import 'package:e_commerce/pages/Edit_page/edit_profile_page.dart';
 import 'package:e_commerce/pages/Home_Screen/children_category.dart';
@@ -66,8 +67,9 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         initialRoute: Constants.userID != null
             ? AdminHomePage.routeName
-            : UserLoginPage.routeName,
+            : CategoryPage.routeName,
         routes: {
+          CategoryPage.routeName :(context)=> const CategoryPage(),
           UploadProductPage.routeName: (context) => const UploadProductPage(),
           AdminHomePage.routeName :(context) => const AdminHomePage(),
           AdminLoginPage.routeName: (context) => const AdminLoginPage(),
@@ -86,7 +88,7 @@ class MyApp extends StatelessWidget {
           MenCategory.routeName: (context) => const MenCategory(),
           LayoutPage.routeName: (context) => const LayoutPage(),
           EditProfilePage.routeName: (context) => EditProfilePage(),
-          ChangepasswordPage.routeName: (context) => const ChangepasswordPage(),
+          ChangePasswordPage.routeName: (context) => const ChangePasswordPage(),
           PaymentPage.routName: (context) => const PaymentPage(),
           NewCardEditPage.routeName: (context) => const NewCardEditPage(),
           OrdersPage.routeName: (context) => const OrdersPage(),

@@ -52,59 +52,13 @@ class _SplashScreenState extends State<SplashScreen>
               color: const Color.fromARGB(181, 11, 36, 34).withOpacity(0.35),
             ),
           ),
-          const Column(
+          Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Row(
+              Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
-                    'B',
-                    style: TextStyle(
-                      fontStyle: FontStyle.italic,
-                      fontSize: 62.3,
-                      fontWeight: FontWeight.w900,
-                      color: Colors.white,
-                    ),
-                  ),
-                  Stack(
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.fromLTRB(12, 12, 0, 0),
-                        child: Text(
-                          textAlign: TextAlign.center,
-                          'S',
-                          style: TextStyle(
-                            fontStyle: FontStyle.italic,
-                            fontSize: 62.3,
-                            fontWeight: FontWeight.w900,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.fromLTRB(0, 25, 0, 0),
-                        child: Text(
-                          'S',
-                          style: TextStyle(
-                            fontStyle: FontStyle.italic,
-                            fontSize: 62.3,
-                            fontWeight: FontWeight.w900,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                  Text(
-                    'TORE',
-                    style: TextStyle(
-                      fontStyle: FontStyle.italic,
-                      fontSize: 62.3,
-                      fontWeight: FontWeight.w900,
-                      color: Colors.white,
-                    ),
-                  ),
+                  Image.asset('assets/w in r.png'),
                 ],
               ),
             ],

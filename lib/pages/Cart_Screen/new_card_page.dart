@@ -15,7 +15,7 @@ class NewCardPage extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          text: 'BSB',
+          text: 'W in R ',
         ),
         actions: [
           Padding(

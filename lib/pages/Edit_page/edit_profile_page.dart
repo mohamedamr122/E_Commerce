@@ -20,7 +20,7 @@ class EditProfilePage extends StatelessWidget {
           backgroundColor: Colors.white,
           centerTitle: true,
           elevation: 0,
-          title: const AppBarText(text: 'B S B')),
+          title: const AppBarText(text: 'W in R ')),
       body: ListView(
         padding: const EdgeInsets.all(16),
         children: [
@@ -131,7 +131,7 @@ class EditProfilePage extends StatelessWidget {
             children: [
               TextButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, ChangepasswordPage.routeName);
+                  Navigator.pushNamed(context, ChangePasswordPage.routeName);
                 },
                 child: const Text(
                   'change password',

@@ -26,7 +26,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         leadingWidth: 66,
-        title: const AppBarText(text: 'B & S'),
+        title: const AppBarText(text: 'W in R'),
         centerTitle: true,
         leading: IconButton(
           onPressed: () => {},
